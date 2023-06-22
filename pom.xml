@@ -91,17 +91,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-        		<groupId>io.openliberty.tools</groupId>
-        		<artifactId>liberty-maven-plugin</artifactId>
-        		<version>3.7.1</version>
-        		<configuration>
-          		<appsDirectory>apps</appsDirectory>
-          		<installAppPackages>spring-boot-project</installAppPackages>
-        		</configuration>
-      		</plugin>
-
-
 		</plugins>
 	</build>
 
