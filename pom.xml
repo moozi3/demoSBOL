@@ -4,9 +4,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
+	<groupId>org.springframework</groupId>
 	<artifactId>demoSBOL</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>demoSBOL</name>
 	<description>Demo project for Spring Boot w open liberty</description>
 
@@ -35,6 +35,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+						<groupId>org.hamcrest</groupId>
+						<artifactId>hamcrest-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
@@ -79,7 +91,15 @@
 					</execution>
 				</executions>
 			</plugin>
-
+			<plugin>
+        		<groupId>io.openliberty.tools</groupId>
+        		<artifactId>liberty-maven-plugin</artifactId>
+        		<version>3.7.1</version>
+        		<configuration>
+          		<appsDirectory>apps</appsDirectory>
+          		<installAppPackages>spring-boot-project</installAppPackages>
+        		</configuration>
+      		</plugin>
 
 
 		</plugins>
