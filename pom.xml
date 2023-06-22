@@ -71,7 +71,7 @@
 						<id>package-server</id>
 						<phase>package</phase>
 						<goals>
-							<goal>ceate</goal>
+							<goal>create</goal>
 							<goal>install-feature</goal>
 							<goal>deploy</goal>
 							<goal>package</goal>

@@ -2,8 +2,8 @@
 <server description = "new liberty server">
 
     <featureManager>
-        <feature>servlet-4.0</feature>
         <feature>springBoot-2.0</feature>
+        <feature>servlet-4.0</feature>
     </featureManager>
 
     <httpEndpoint id =  "defaultHttpEndpoint"
